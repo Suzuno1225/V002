@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <title>輸入頁面</title>
+</head>
+<body>
+  <h1>請輸入資料</h1>
+
+  <label for="userInput">輸入你的名字：</label>
+  <input type="text" id="userInput">
+
+  <button onclick="saveData()">送出</button>
+
+  <script>
+    function saveData() {
+      const userInput = document.getElementById('userInput').value;
+      localStorage.setItem('userName', userInput); // 儲存到localStorage
+      window.location.href = 'result.html'; // 跳轉到結果頁
+    }
+  </script>
+</body>
+</html>
